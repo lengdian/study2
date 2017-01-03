@@ -8,16 +8,19 @@ public class Test1_2
 {
     public static void main(String[] args)
     {
-        List<Integer> list = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9);
+        List<Integer> list = Arrays.asList(1, 2, 3);
 
+        //传统循环方式
         for (int i = 0; i < list.size(); i++) System.out.println(list.get(i));
 
         System.out.println("-----------------------");
 
-        for(Integer i:list) System.out.println(i);
+        //增强的for循环方式
+        for (Integer i : list) System.out.println(i);
 
         System.out.println("-----------------------");
 
+        //匿名内部类方式
         list.forEach(new Consumer<Integer>()
         {
             @Override
@@ -28,5 +31,14 @@ public class Test1_2
         });
 
         System.out.println("-----------------------");
+
+        //lambda表达式方式
+        list.forEach(i -> System.out.println(i));
+
+        System.out.println("-----------------------");
+
+        //方法引用方式 method reference
+        list.forEach(System.out::println);
+
     }
 }
