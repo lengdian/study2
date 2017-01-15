@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.function.Consumer;
 
-public class Test1_2
+public class $2_Test1
 {
     public static void main(String[] args)
     {

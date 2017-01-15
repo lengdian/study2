@@ -2,7 +2,7 @@ package com.hxy.lambda;
 
 import javax.swing.*;
 
-public class SwingTest_1
+public class $1_SwingTest
 {
     public static void main(String[] args)
     {

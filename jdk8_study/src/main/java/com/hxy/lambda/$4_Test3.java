@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class Test3_4
+public class $4_Test3
 {
     public static void main(String[] args)
     {
@@ -16,14 +16,19 @@ public class Test3_4
 //
 //        new Thread(() -> System.out.println("hello world")).start();
 
-        List<String> list= Arrays.asList("hello","world","hello world");
-        List<String> list2=new ArrayList<>();
+        List<String> list = Arrays.asList("hello", "world", "hello world");
+        List<String> list2 = new ArrayList<>();
         // 传统复制方法
 //        list.forEach(item -> list2.add(item.toUpperCase()));
 //        list2.forEach(item -> System.out.println(item));
 
-        //流（stream）
+        //流（stream）+lambda表达式
         list.stream().map(item -> item.toUpperCase()).forEach(item -> System.out.println(item));
+
+        //流+方法引用
+        list.stream().map(String::toUpperCase).forEach(System.out::println);
+
+
 
 //        list.forEach(item -> System.out.println(item.toUpperCase()));
 
@@ -31,11 +36,13 @@ public class Test3_4
 }
 
 @FunctionalInterface
-interface TheInterface{
+interface TheInterface
+{
     void theMethod();
 }
 
 @FunctionalInterface
-interface TheInterface2{
+interface TheInterface2
+{
     void theMethod2();
 }
