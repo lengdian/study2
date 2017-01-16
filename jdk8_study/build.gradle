@@ -11,7 +11,14 @@ repositories {
 }
 
 dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.11'
+    testCompile group: 'junit', name: 'junit', version: '4.11';
+    compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.0';
+    compile group: 'org.apache.axis2', name: 'axis2', version: '1.6.2';
+    compile group: 'org.apache.axis2', name: 'axis2-adb', version: '1.6.2';
+    compile group: 'org.apache.axis2', name: 'axis2-transport-http', version: '1.6.2';
+    compile group: 'org.apache.axis2', name: 'axis2-transport-local', version: '1.6.2';
+    compile group: 'com.alibaba', name: 'fastjson', version: '1.2.21'
+
     /*
     简写方式：testCompile('junit:junit:4.11')
      */
