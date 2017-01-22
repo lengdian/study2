@@ -1,7 +1,8 @@
-package com.hxy.function;
+package com.hxy.functionalInterface;
 
 import java.util.function.Function;
 
+//Function接口
 public class $1_FunctionTest
 {
     public static void main(String[] args)

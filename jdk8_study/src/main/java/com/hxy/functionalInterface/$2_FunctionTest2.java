@@ -1,10 +1,11 @@
-package com.hxy.function;
+package com.hxy.functionalInterface;
 
 import java.util.function.BiFunction;
 import java.util.function.Function;
 
 /*
 Function接口的compose和andThen方法
+BiFunction
  */
 public class $2_FunctionTest2
 {
@@ -17,6 +18,8 @@ public class $2_FunctionTest2
 
         System.out.println(ft.compute3(1, 2, (v1, v2) -> v1 + v2));
         System.out.println(ft.compute3(1, 2, (v1, v2) -> v1 * v2));
+
+        System.out.println(ft.compute4(1, 2, (v1, v2) -> v1 + v2, value -> value * value));
     }
 
     //compose方法：f1 <- f2 <- value
@@ -40,5 +43,10 @@ public class $2_FunctionTest2
         return bif.apply(a, b);
     }
 
+    private int compute4(int a, int b, BiFunction<Integer, Integer, Integer> biFunction, Function<Integer, Integer> function)
+    {
+        BiFunction<Integer, Integer, Integer> biFun_new = biFunction.andThen(function);
+        return biFun_new.apply(a, b);
+    }
 
 }
