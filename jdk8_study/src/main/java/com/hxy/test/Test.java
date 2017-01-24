@@ -30,8 +30,8 @@ public class Test
         Map<String, String> dataObject = new HashMap<>();
         dataObject.put("orgId", "8888");
         dataObject.put("peiSongQiYeCode", "13487");
-        dataObject.put("startDate", "2016-12-15 00:09:08");
-        dataObject.put("endDate", "2017-01-12 23:09:08");
+        dataObject.put("startDate", "2017-01-22 00:09:08");
+        dataObject.put("endDate", "2017-01-22 23:09:08");
         String jsonData = JSON.toJSONString(dataObject);
         System.out.println(jsonData);
         System.out.println(getResult(jsonData, interfaceName));
