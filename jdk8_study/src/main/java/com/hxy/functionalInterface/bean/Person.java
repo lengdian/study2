@@ -2,14 +2,18 @@ package com.hxy.functionalInterface.bean;
 
 public class Person
 {
-    private String username;
+    private String username = "hxy";
 
-    private int age;
+    private int age = 26;
 
     public Person(String username, int age)
     {
         this.username = username;
         this.age = age;
+    }
+
+    public Person()
+    {
     }
 
     public String getUsername()
