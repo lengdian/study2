@@ -1,0 +1,3 @@
+Optional类：解决NPE（NullPointerException）问题
+
+推荐使用函数式风格编写代码

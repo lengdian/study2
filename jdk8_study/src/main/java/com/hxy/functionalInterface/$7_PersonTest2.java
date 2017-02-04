@@ -2,6 +2,7 @@ package com.hxy.functionalInterface;
 
 import com.hxy.functionalInterface.bean.Person;
 
+import java.util.Optional;
 import java.util.function.Supplier;
 
 //Supplier接口
@@ -15,5 +16,6 @@ public class $7_PersonTest2
         //方法引用形式
         Supplier<Person> supplier1=Person::new;
         System.out.println(supplier1.get().getUsername());
+
     }
 }
