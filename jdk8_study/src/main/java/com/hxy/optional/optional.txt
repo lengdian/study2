@@ -1,3 +1,4 @@
 Optional类：解决NPE（NullPointerException）问题
 
+对比传统方式，有编译提示，语义更清晰，符合函数式编写风格，代码精简
 推荐使用函数式风格编写代码
