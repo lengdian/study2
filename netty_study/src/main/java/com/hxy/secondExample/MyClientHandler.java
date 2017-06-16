@@ -10,7 +10,7 @@ public class MyClientHandler extends SimpleChannelInboundHandler<String>
     {
         System.out.println(ctx.channel().remoteAddress());
         System.out.println("client output:" + msg);
-//        ctx.writeAndFlush("from client:" + LocalDateTime.now());
+        //        ctx.writeAndFlush("from client:" + LocalDateTime.now());
     }
 
     @Override
@@ -22,7 +22,7 @@ public class MyClientHandler extends SimpleChannelInboundHandler<String>
     @Override
     public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception
     {
-       cause.printStackTrace();
+        cause.printStackTrace();
         ctx.close();
     }
 }
