@@ -13,4 +13,8 @@ rpc建立基本流程：
 3、在和客户端与服务器端分别引入rpc编译器所生成的文件，即可像调用本地方法一样调用远程方法
 
 google protobuf:应用于rpc通讯
+apache thrift:应用于rpc通讯
+google grpc:应用于rpc通讯
+
+gradlew -> gradle wrapper
 
