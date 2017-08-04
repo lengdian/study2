@@ -16,5 +16,5 @@ google protobuf:应用于rpc通讯
 apache thrift:应用于rpc通讯
 google grpc:应用于rpc通讯
 
-gradlew -> gradle wrapper
+gradlew -> gradle wrapper的使用
 
