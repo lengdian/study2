@@ -42,5 +42,6 @@ class Test2
         //实现FunctionalInterface注解的的接口的实例可以用lambda表达式生成
         MyInterface mi = () -> System.out.println("hello");
         System.out.println(mi.getClass());
+        System.out.println(mi.getClass().getSuperclass());
     }
 }
