@@ -10,14 +10,14 @@ public class $1_SwingTest
         JButton jButton = new JButton("button");
 
         //传统模式
-        //        jButton.addActionListener(new ActionListener()
-        //        {
-        //            @Override
-        //            public void actionPerformed(ActionEvent e)
-        //            {
-        //                System.out.println("Button Pressed!");
-        //            }
-        //        });
+//        jButton.addActionListener(new ActionListener()
+//        {
+//            @Override
+//            public void actionPerformed(ActionEvent e)
+//            {
+//                System.out.println("Button Pressed!");
+//            }
+//        });
 
         //使用lambda表达式
         jButton.addActionListener(event -> System.out.println("Button Pressed!"));
