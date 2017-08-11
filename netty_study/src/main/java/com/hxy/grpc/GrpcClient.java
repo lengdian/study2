@@ -13,13 +13,11 @@ public class GrpcClient
     {
         ManagedChannel managedChannel = ManagedChannelBuilder.forAddress("localhost", 8899).usePlaintext(true).build();
 
-        //        StudentServiceGrpc.StudentServiceBlockingStub blockingStub = StudentServiceGrpc.newBlockingStub
-        // (managedChannel);
-        StudentServiceGrpc.StudentServiceStub stub = StudentServiceGrpc.newStub(managedChannel);
-        //
-        //        MyResponse response = blockingStub.getRealnameByUsername(MyRequest.newBuilder().setUsername("hy6")
-        // .build());
-        //        System.out.println(response.getRealname());
+        StudentServiceGrpc.StudentServiceBlockingStub blockingStub = StudentServiceGrpc.newBlockingStub(managedChannel);
+        //        StudentServiceGrpc.StudentServiceStub stub = StudentServiceGrpc.newStub(managedChannel);
+
+        MyResponse response = blockingStub.getRealnameByUsername(MyRequest.newBuilder().setUsername("hy6").build());
+        System.out.println(response.getRealname());
         //
         //        System.out.println("------------------------");
         //
@@ -85,53 +83,54 @@ public class GrpcClient
         //            e.printStackTrace();
         //        }
 
-        System.out.println("---------------------");
-
-        StreamObserver<StreamRequest> requestStreamObserver = stub.biTalk(new StreamObserver<StreamResponse>()
-        {
-            @Override
-            public void onNext(StreamResponse value)
-            {
-                System.out.println(value.getResponseInfo());
-            }
-
-            @Override
-            public void onError(Throwable t)
-            {
-                System.out.println(t.getMessage());
-            }
-
-            @Override
-            public void onCompleted()
-            {
-                System.out.println("onCompleted!");
-            }
-        });
-
-        for (int i = 0; i < 10; i++)
-        {
-            requestStreamObserver.onNext(StreamRequest.newBuilder().setRequestInfo(LocalDateTime.now().toString())
-                    .build());
-
-            try
-            {
-                Thread.sleep(1000);
-            }
-            catch (InterruptedException e)
-            {
-                e.printStackTrace();
-            }
-        }
-
-        requestStreamObserver.onCompleted();
-
-        try
-        {
-            Thread.sleep(50000);
-        }
-        catch (InterruptedException e)
-        {
-            e.printStackTrace();
-        }
+        //        System.out.println("---------------------");
+        //
+        //        StreamObserver<StreamRequest> requestStreamObserver = stub.biTalk(new StreamObserver<StreamResponse>()
+        //        {
+        //            @Override
+        //            public void onNext(StreamResponse value)
+        //            {
+        //                System.out.println(value.getResponseInfo());
+        //            }
+        //
+        //            @Override
+        //            public void onError(Throwable t)
+        //            {
+        //                System.out.println(t.getMessage());
+        //            }
+        //
+        //            @Override
+        //            public void onCompleted()
+        //            {
+        //                System.out.println("onCompleted!");
+        //            }
+        //        });
+        //
+        //        for (int i = 0; i < 10; i++)
+        //        {
+        //            requestStreamObserver.onNext(StreamRequest.newBuilder().setRequestInfo(LocalDateTime.now()
+        // .toString())
+        //                    .build());
+        //
+        //            try
+        //            {
+        //                Thread.sleep(1000);
+        //            }
+        //            catch (InterruptedException e)
+        //            {
+        //                e.printStackTrace();
+        //            }
+        //        }
+        //
+        //        requestStreamObserver.onCompleted();
+        //
+        //        try
+        //        {
+        //            Thread.sleep(50000);
+        //        }
+        //        catch (InterruptedException e)
+        //        {
+        //            e.printStackTrace();
+        //        }
     }
 }

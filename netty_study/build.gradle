@@ -40,6 +40,8 @@ buildscript {
 }
 //grpc插件
 protobuf {
+    //指定生成代码的存放位置
+    generatedFilesBaseDir = "$projectDir/src"
     protoc {
         artifact = "com.google.protobuf:protoc:3.2.0"
     }
@@ -50,7 +52,10 @@ protobuf {
     }
     generateProtoTasks {
         all()*.plugins {
-            grpc {}
+            grpc {
+                //指定生成文件夹的名称
+                outputSubDir = "java"
+            }
         }
     }
 }
