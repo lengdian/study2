@@ -1,0 +1,21 @@
+{
+  "name": "study1",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack --config webpack.config.js",
+    "dev-server": "webpack-dev-server --hot --inline --content-base ./dist"
+  },
+  "author": "hxy",
+  "devDependencies": {
+    "css-loader": "^0.28.4",
+    "vue-loader": "^13.0.0",
+    "vue-template-compiler": "^2.3.4",
+    "webpack": "^3.0.0",
+    "webpack-dev-server": "^2.5.0"
+  },
+  "dependencies": {
+    "lodash": "^4.17.4",
+    "vue": "^2.3.4"
+  }
+}
