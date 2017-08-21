@@ -2,7 +2,7 @@ java.io中，最为核心的概念是流（stream），面向流的编程。Java
 
 java.nio中，拥有三个核心概念：Selector、Channel与Buffer。在java.nio中，我们是面向块（block）或是缓冲区（buffer）编程的。
     Buffer:
-        Buffer本身就是一块内存，底层实现上，它实际上是个数组。
+        Buffer本身就是一块内存，底层实现上，它是个数组。
         数据的读、写都是通过Buffer实现的。
         除了数组之外，Buffer还提供了对于数据的结构化访问，并且可以追踪到系统的读写过程。
         java中的7种原生数据类型都有各自对应的Buffer类型，如：IntBuffer、LongBuffer,但是没有BooleanBuffer类型。
@@ -15,5 +15,8 @@ java.nio中，拥有三个核心概念：Selector、Channel与Buffer。在java.n
 
 
 关于NIO Buffer中的3个重要状态属性的含义：position、limit、capacity
+0 <= mark <= position <= limit <= capacity
 
-
+nio api中的绝对方法与相对方法
+相对方法：limit值与position值会在操作时被考虑到（被修改）
+绝对方法：完全忽略掉limit与position值（不修改）
