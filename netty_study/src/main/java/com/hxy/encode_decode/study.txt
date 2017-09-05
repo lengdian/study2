@@ -1,0 +1,29 @@
+ASCII(American Standard Code for Information Interchange,美国信息交换标准代码)
+使用7bit表示一个字符，共可表示128个字符
+
+ISO-8859-1
+使用8bit（1 byte）表示一个字符，共可表示256个字符
+ISO-8859-1兼容ASCII
+
+GB2312
+使用两个字节表示一个汉字
+
+GBK
+对GB2312的扩展
+
+GB18030
+对GBK的扩展
+
+BIG5
+针对繁体中文的字符集
+
+unicode
+表示世界全部字符
+采用了两个字节表示一个字符，是一种编码方式
+UTF（Unicode Translation Format,unicode 转换格式）
+    是一种存储方式
+    utf-8是unicode的实现方式之一
+utf-8
+    变长字节表示形式
+    一般来说，utf-8会通过3个字节表示一个中文
+    BOM（Byte Order Mark,字节序）
