@@ -14,6 +14,7 @@ public class MyServerInitializer extends ChannelInitializer<SocketChannel>
     {
         ChannelPipeline pipeline = ch.pipeline();
 
+        //状态检测配置
         pipeline.addLast(new IdleStateHandler(5,7,10, TimeUnit.SECONDS));
         pipeline.addLast(new MyServerHandler());
 

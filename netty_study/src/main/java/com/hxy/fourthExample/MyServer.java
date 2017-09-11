@@ -18,6 +18,7 @@ public class MyServer
         try
         {
             ServerBootstrap serverBootstrap = new ServerBootstrap();
+            //handler用于处理bossGroup,childHandler用于处理workerGroup
             serverBootstrap.group(bossGroup, workerGroup).channel(NioServerSocketChannel.class).handler(new
                     LoggingHandler(LogLevel.INFO)).childHandler(new MyServerInitializer());
 
