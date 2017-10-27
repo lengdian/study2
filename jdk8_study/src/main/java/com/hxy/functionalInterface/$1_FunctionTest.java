@@ -14,6 +14,7 @@ public class $1_FunctionTest
         System.out.println(ft.compute(2, value -> {
             return 5 + value;
         }));
+
         System.out.println(ft.convert(1, value -> "helloworld_" + value));
 
         //传递值
