@@ -13,7 +13,7 @@ public class $5_PredicateTest2
 
         $5_PredicateTest2 pt = new $5_PredicateTest2();
 
-        Predicate<Integer> condition1 = value -> value > 1;
+        Predicate<Integer> condition1 = value -> value > 5;
         pt.conditionFilter(list,condition1);
         System.out.println("-----------");
 

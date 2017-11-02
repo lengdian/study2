@@ -44,8 +44,7 @@ public class $3_PersonTest
 
     }
 
-    private List<Person> getPersonByAge2(int age, List<Person> persons, BiFunction<Integer, List<Person>,
-            List<Person>> biFunction)
+    private List<Person> getPersonByAge2(int age, List<Person> persons, BiFunction<Integer, List<Person>, List<Person>> biFunction)
     {
         return biFunction.apply(age, persons);
 
