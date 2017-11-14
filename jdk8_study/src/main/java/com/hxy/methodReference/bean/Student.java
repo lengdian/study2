@@ -21,6 +21,7 @@ public class Student
         return score;
     }
 
+    //设计错误的方式
     public static int compareStudentByScore(Student s1, Student s2)
     {
         return s1.getScore() - s2.getScore();
@@ -31,6 +32,7 @@ public class Student
         return s1.getName().compareToIgnoreCase(s2.getName());
     }
 
+    //设计正确的方式
     public int compareByScore(Student student)
     {
         return this.getScore() - student.getScore();
