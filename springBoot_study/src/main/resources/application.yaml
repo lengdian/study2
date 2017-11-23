@@ -1,0 +1,37 @@
+#选择配置文件
+spring:
+  profiles:
+    active: pro
+  datasource:
+      driver-class-name: com.mysql.jdbc.Driver
+      url: jdbc:mysql://173.2.2.217:3306/test
+      username: root
+      password: 61208
+  jpa:
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+
+# application.yaml
+# Server settings (ServerProperties)
+server:
+  port: 8088
+  address: 127.0.0.1
+  sessionTimeout: 30
+  context-path: /study # secs
+  # Tomcat specifics
+  tomcat:
+    accessLogEnabled: false
+    protocolHeader: x-forwarded-proto
+    remoteIpHeader: x-forwarded-for
+    basedir:
+    backgroundProcessorDelay: 30
+
+#yaml文件的用法
+customName: hxy
+#对象可以使用注解ConfigurationProperties直接映射到class文件上
+hxy:
+  name: hxy2
+  age: 27
+content: "name:${customName},age:${hxy.age}"
+
