@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Stream;
 
-//流的使用
+//流的使用：中间操作与终止操作
 public class $7_StreamTest7
 {
     public static void main(String[] args)

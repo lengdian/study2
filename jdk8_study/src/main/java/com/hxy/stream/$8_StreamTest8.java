@@ -13,6 +13,5 @@ public class $8_StreamTest8
         //注意该程序永远不会结束，因为iterate的无限流没有被截止
 //        IntStream.iterate(0,i->(i+1)%2).distinct().limit(5).forEach(System.out::println);
 
-
     }
 }
