@@ -20,3 +20,5 @@ java.nio中，拥有三个核心概念：Selector、Channel与Buffer。在java.n
 nio api中的绝对方法与相对方法
 相对方法：limit值与position值会在操作时被考虑到（被修改）
 绝对方法：完全忽略掉limit与position值（不修改）
+
+nio相对普通io效率高（通过零拷贝方式）、开销小（io多路复用-selector）

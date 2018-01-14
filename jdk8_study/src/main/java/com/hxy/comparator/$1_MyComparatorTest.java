@@ -5,6 +5,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
+//比较器
 public class $1_MyComparatorTest
 {
     public static void main(String[] args)

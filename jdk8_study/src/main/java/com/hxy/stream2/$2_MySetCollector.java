@@ -52,8 +52,8 @@ public class $2_MySetCollector<T> implements Collector<T, Set<T>, Set<T>>
     @Override
     public Function<Set<T>, Set<T>> finisher()
     {
-//        System.out.println("finisher invoked!");
-//        return Function.identity();
+        //        System.out.println("finisher invoked!");
+        //        return Function.identity();
 
         //如果不需要最后的转换，可以直接抛出异常，确保不会被调用到
         throw new UnsupportedOperationException();

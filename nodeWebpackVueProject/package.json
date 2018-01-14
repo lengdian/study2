@@ -1,0 +1,15 @@
+{
+  "name": "nodeWebpackVueProject",
+  "author": "hxy",
+  "description": "node+webpack+vue整合学习项目",
+  "scripts": {
+    "build": "webpack"
+  },
+  "dependencies": {
+    "vue": "^2.5.13",
+    "element-ui": "^2.0.11"
+  },
+  "devDependencies": {
+    "webpack": "^3.10.0"
+  }
+}
